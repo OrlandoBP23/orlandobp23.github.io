@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algoritmo 2</title>
+<a href="index.html" id="indice"> Regresar al indice</a>
+<script src="funciones7.js"></script>
+</head>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #a5e29b;
+            padding: 20px;
+            text-align: center;
+        }
+        h3{
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        #resultados{
+            text-align: center;
+            font-weight: bold;
+        }
+
+        input,
+        button {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #indice {
+            color: #1a610f;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+        }
+
+        #indice:hover {
+            color: #31c51b;
+        }
+
+        #out {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+  
+ 
+  <body onload="Aleatorio()">
+  <h1>Arreglos 2:</h1>
+  <p>
+          Capture un arreglo de 10 elementos de tipo entero, 
+          imprima el arreglo de forma vertical y horizontal, 
+          imprima el arreglo de forma ascendente y descendente, 
+          encuentre el elemento menor, el mayor, la suma, 
+          el promedio o media, la mediana y la moda. 
+ </p>
+  
+  <h3>
+          Nota: el input donde se capturan los números y el botón se deben deshabilitar al capturar el último elemento del arreglo. 
+          El botón generar empieza inactivo y inicia deshabilitado, valide que el elemento del arreglo sea entero.
+ </h3>
+ 
+  <form action="javascript: Capturar()">
+  <p style="display: inline;" id="contador">Elemento [0]:</p>
+  <input type="number" id="elementoInput" required>
+  <input type="submit" value="Capturar" id="capturarBoton">
+  <input type="button" value="Reiniciar" onclick="Reiniciar()">
+  <input type="button" value="Generar resultados" id="generarBoton" onclick="Calcular()" disabled>
+  </form>
+  <p id="resultados"></p>
+  
+      <table id="tablaHorizontal" border="2" style="border-collapse:collapse;">
+  <tr id="renglonIndice"></tr>
+  <tr id="renglonDato"></tr>
+  </table>
+  <br>
+  <table id="tablaHorizontal2" border="2" style="border-collapse:collapse;">
+  <tr id="renglonIndice2"></tr>
+  <tr id="renglonDato2"></tr>
+  </table>
+  <table id="tablaHorizontal3" border="2" style="border-collapse:collapse;">
+  <tr id="renglonIndice3"></tr>
+  <tr id="renglonDato3"></tr>
+  </table>
+  <br>
+  <table id="tablaVertical" border="2" style="border-collapse:collapse; display: inline-block;"></table>
+  <table id="tablaVertical2" border="2" style="border-collapse:collapse; display: inline-block;"></table>
+  <table id="tablaVertical3" border="2" style="border-collapse:collapse; display: inline-block;"></table>
+  </body>
+  </html>

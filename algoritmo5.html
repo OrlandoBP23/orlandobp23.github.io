@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo5</title>
+    <a href="index.html" id="indice"> Regresar al indice</a>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #a5e29b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        input,
+        button {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #indice {
+            color: #1a610f;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+        }
+
+        #indice:hover {
+            color: #31c51b;
+        }
+    </style>
+    <script>
+        function calcularPi() {
+            var iteraciones = parseInt(document.getElementById('iteraciones').value);
+            var pi = 0;
+            var signo = 1;
+
+            if (isNaN(iteraciones) || iteraciones < 1) {
+                document.getElementById('resultado').innerHTML = "Error: El número de iteraciones debe ser mayor que 0.";
+                return;
+            }
+
+            for (var i = 0; i < iteraciones; i++) {
+                pi += signo / (2 * i + 1);
+                signo *= -1;
+            }
+
+            pi *= 4;
+
+            var serie = "";
+            for (var i = 0; i < iteraciones; i++) {
+                if (i % 2 === 0) {
+                    serie += `1/${2 * i + 1}`;
+                } else {
+                    serie += ` - 1/${2 * i + 1}`;
+                }
+                if (i < iteraciones - 1) {
+                    serie += " + ";
+                }
+            }
+
+            document.getElementById('resultado').innerHTML =
+                `Número de iteraciones: ${iteraciones}<br>` +
+                `π = 4 (${serie})<br>` +
+                `π ≈ ${pi.toFixed(5)}`;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Cálculo de π usando la Serie de Leibniz</h1>
+    <p>Introduce el número de iteraciones:</p>
+    <input type="number" id="iteraciones" placeholder="Número de iteraciones">
+    <button onclick="calcularPi()">Calcular π</button>
+    <div id="resultado"></div>
+    
+</body>
+
+</html>

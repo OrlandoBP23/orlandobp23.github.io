@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #a5e29b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #lim {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #out,
+        #resultado {
+            margin-top: 18px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #botonC:hover {
+            background-color: rgb(61, 179, 61);
+        }
+
+        #botonC {
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        #indice {
+            color: #1a610f;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+        }
+
+        #indice:hover {
+            color: #31c51b;
+        }
+    </style>
+    <title>Algoritmo4</title>
+    <a href="index.html" id="indice"> Regresar al indice</a>
+    <script>
+        function fibonacci() {
+
+            document.getElementById("out").innerHTML = "";
+            document.getElementById('resultado').innerHTML = "";
+
+            const lim = parseInt(document.getElementById('lim').value);
+            if (isNaN(lim) || lim <= 0) {
+                document.getElementById("out").innerHTML = "Ingresar solo números positivos mayores a 1";
+                return;
+            } else {
+                let fibo = [0, 1];
+                let resultado = [];
+
+
+                if (lim === 1) {
+                    resultado = [fibo[0]];
+                } else if (lim === 2) {
+                    resultado = fibo;
+                } else {
+                    for (let i = 2; i < lim; i++) {
+                        fibo[i] = fibo[i - 1] + fibo[i - 2];
+                    }
+                    resultado = fibo;
+                }
+
+                document.getElementById('resultado').innerHTML = `Los primeros ${lim} números de la serie de Fibonacci son: ${resultado.join(', ')}`;
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: #a5e29b;">
+    <header>
+        <h1>Serie o Sucesión de Fibonacci, solicite el límite al usuario.</h1>
+    </header>
+    <input type="number" id="lim" placeholder="Limite">
+    <input type="button" value="Calcular serie" onclick="fibonacci()" id="botonC"> <br>
+    <p id="resultado"></p>
+    <p id="out"></p>
+    <img src="fibonacci.png" alt="Serie de Fibonacci">
+</body>
+
+</html>

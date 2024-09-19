@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #a5e29b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #num1,
+        #num2,
+        #botonR {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #botonR:hover {
+            background-color: rgb(61, 179, 61);
+
+        }
+
+        #out {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #indice {
+            color: #1a610f;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+        }
+
+        #indice:hover {
+            color: #31c51b;
+        }
+    </style>
+    <title>Algoritmo2</title>
+    <a href="index.html" id="indice"> Regresar al indice</a>
+    <script>
+        function multiplos() {
+            if (!isNaN(document.getElementById("num1").value) && !isNaN(document.getElementById("num2").value)) {
+
+                var a = parseInt(document.getElementById("num1").value);
+                var b = parseInt(document.getElementById("num2").value);
+                var multiplos = "";
+                var count = 0;
+
+                for (let i = a; i <= b; i++) {
+
+                    if (i % 3 == 0 && i != 0) {
+                        multiplos += `<br>${i}`
+                        count++;
+
+                    }
+
+
+                }
+
+                if (a != b) {
+
+                    for (let i = a; i >= b; i--) {
+
+                        if (i % 3 == 0 && i != 0) {
+                            multiplos += `<br>${i}`;
+                            count++;
+                        }
+
+                    }
+
+                }
+
+                document.getElementById("out").innerHTML = (`La cantidad de Multiplos de 3 entre ${a} y ${b} son: ${count}`);
+            }
+
+            else {
+                document.getElementById("out").innerHTML = ("Ingresar solo numeros");
+
+            }
+
+        }
+
+    </script>
+    <h1> Encontrar e imprimir la cantidad numeros comprendidos entre el dato1 y dato2 que son multiplos de tres.</h1>
+</head>
+
+<body>
+    <input type="number" id="num1" placeholder="Dato1">
+    <input type="number" id="num2" placeholder="Dato2">
+    <input type="button" value="Cantidad multiplos de 3" onclick="multiplos()" id="botonR">
+    <p id="out"></p>
+</body>
+
+</html>

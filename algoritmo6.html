@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 6</title>
+    <a href="index.html" id="indice">Regresar al índice</a>
+    <script src="funciones.js"></script> 
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #a5e29b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        input,
+        button {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #indice {
+            color: #1a610f;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+        }
+
+        #indice:hover {
+            color: #31c51b;
+        }
+    </style>
+</head>
+<body>
+   
+        <h1>Capture e imprima un arreglo de 10 elementos de tipo entero. El arreglo se debe de imprimir de forma horizontal y vertical. Muestre el índice de cada elemento. La captura de elementos se debe cancelar al introducir el último elemento. Incluya un botón de reinicio.</h1>
+        <p style="display: inline;" id="arreglo">Capture el elemento [0]</p> 
+        <input type="number" id="datos" onkeydown="if(event.key===`.`){event.preventDefault();}" required>
+        <p id = "error"></p>
+        <input type="button" value="Capturar" onclick="Capturar()" id="boton">
+        <input type="button" value="Reiniciar" onclick="Reiniciar()">
+  
+    <table border="1">
+        <tr id="renglon"></tr> <!-- Fila para la impresión horizontal -->
+        <tr id = "renglon2"></tr>
+    </table><br>
+    <table border="1" id="vertical"> <!-- Tabla para la impresión vertical -->
+    </table>
+        
+   
+</body>
+</html>

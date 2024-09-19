@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #a5e29b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #numero,
+        #botonR {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        #botonR:hover {
+            background-color: rgb(61, 179, 61);
+
+        }
+
+        #out {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #indice {
+            color: #1a610f;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+        }
+
+        #indice:hover {
+            color: #31c51b;
+        }
+    </style>
+    <title>Algoritmo3</title>
+    <a href="index.html" id="indice"> Regresar al indice</a>
+    <h1>Programa que muestre en pantalla los n numeros naturales pares elevados al cubo.</h1>
+    <script>
+        function cubo() {
+            if (!isNaN(document.getElementById("numero").value) && ((document.getElementById("numero").value > 1))) {
+                var naturales = parseInt(document.getElementById("numero").value);
+                var resultado = "Resultado: <br>";
+                for (let i = 2; i <= naturales; i++) {
+                    if (i % 2 == 0) {
+                        resultado += `${i} al cubo es ${i * i * i} <br>`
+                    }
+
+
+                }
+                document.getElementById("out").innerHTML = resultado;
+            } else
+                document.getElementById("out").innerHTML = "Error: Ingresar numero entero natural";
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="numero" placeholder="Limite">
+    <input type="button" value="Encontrar los numeros al cubo" onclick="cubo()" id="botonR">
+    <p id="out"></p>
+
+</body>
+
+</html>
