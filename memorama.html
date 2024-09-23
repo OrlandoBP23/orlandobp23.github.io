@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>  
+body {
+    background-image: url("img/fondo2.png");
+    background-size: cover;
+}
+    img{
+        width: 150px;
+        height:150px;
+    }
+    
+    #cara{
+        width: 150px;
+    }  
+
+    table{
+    background-image: url("img/fondo3.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+        
+    }
+</style>
+
+<script>
+    var imagenTemporal, esperando = false;
+
+ var tarjetas = [
+    "imagen1.png","imagen1.png","imagen2.png","imagen2.png",
+    "imagen3.png","imagen3.png","imagen4.png","imagen4.png",
+    "imagen5.png","imagen5.png","imagen6.png","imagen6.png",
+    "imagen7.png","imagen7.png","imagen8.jpg","imagen8.jpg"
+                ];
+
+ function cambiarImg(imagen,indice){
+    imagen.src = `./img/${tarjetas[indice]}`;
+
+    if(!esperando){
+        imagenTemporal = imagen;
+    }else{
+        if(imagenTemporal.src == imagen.src){
+            alert("Encontramos un par")
+            eliminarPar(imagenTemporal,imagen);
+        }else{
+            alert("Lo siento no encontraste par")
+        }
+    }
+    esperando = !esperando;
+}  
+
+function eliminarPar(imagen1,imagen2){
+  //  imagen1.src = "";
+   // imagen1.style.display = "none";
+   // imagen2.src = "";
+   // imagen2.style.display = "none";
+   imagen1.style.visibility = "hidden";
+   imagen2.style.visibility = "hidden";
+
+
+}
+ 
+ function revolver(){
+    var j = 0;
+    for (let i = 15; i > 0 ; i--) {
+       j = Math.floor(Math.random() * (i+1));
+       [tarjetas[i],tarjetas[j]] = [tarjetas[j],tarjetas[i]];
+        
+    }
+    document.getElementById("salida").innerHTML = tarjetas.join(" - ");
+ }
+</script>
+
+<body  onload="revolver()">
+    <table align="center">
+        <tr>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,0)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,1)"></td>
+            <td><img src=".\img/img0.jpg"id="cara" onclick="cambiarImg(this,2)"></td>
+            <td><img src=".\img/img0.jpg" id="cara"onclick="cambiarImg(this,3)"></td>
+        </tr>
+        <tr>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,4)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,5)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,6)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,7)"></td>
+        </tr>
+        <tr>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,8)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,9)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,10)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,11)"></td>
+        </tr>
+        <tr>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,12)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,13)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,14)"></td>
+            <td><img src=".\img/img0.jpg" id="cara" onclick="cambiarImg(this,15)"></td>
+        </tr>
+    </table>
+    <p id="salida"></p>
+</body>
+</html>
