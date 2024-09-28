@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("../img/fondo10.jpg");
+    background-image: url("fondo10.jpg");
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -48,9 +48,8 @@ p{
     }  
 
     table{
-    background-image: url("../img/fondo3.jpg");
-    background-image: url("../img/fondo2.jpg");
-    background-image: url("../img/fondo1.jpg");
+    background-image: url("fondo1.jpg");
+    background-image: url("fondo2.jpg");
     height: 100%;
     background-repeat: no-repeat; 
     border-collapse: collapse;   
