@@ -1,0 +1,143 @@
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+}
+
+h1 {
+    font-size: 40px;
+    position: fixed;
+    max-width: 40%;
+    top: 50%;
+    left: 5%;
+    color: rgb(79, 161, 11);
+}
+
+#pilaImg {
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    width: 500px;
+}
+
+h3 {
+    position: fixed;
+    top: 40%;
+    right: 18%;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #a5e29b;
+    padding: 20px;
+    text-align: center;
+}
+
+#num1,
+#num2,
+#botonR {
+    font-size: 18px;
+    margin: 10px;
+}
+
+#botonR:hover {
+    background-color: rgb(61, 179, 61);
+
+}
+
+#out {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#indice {
+    color: #1a610f;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+}
+
+#indice:hover {
+    color: #31c51b;
+}   
+
+#tablita{
+    font-size: 20px;
+    color: #0d7000;
+    font-weight: bold;
+}
+
+#Elemento{
+    font-size: 16px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
+}
+
+#iPush{
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #0b5a00;
+    color: #000000;
+}
+
+#iPush:hover{
+    background-color: #119600;
+}
+
+#iPop{
+border-radius: 10px;
+    padding: 7px;
+    background-color: #0d7400;
+}
+
+#iPop:hover{
+background-color: #129401;
+}
+
+#iPeek{
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #139202;
+}
+
+#iPeek:hover{
+    background-color: #16b102;    
+}
+
+#iFind{
+border-radius: 10px;
+    padding: 7px;
+    background-color: #18bd02;
+}
+
+#iFind:hover{
+background-color: #1cf000;
+}
+
+#isEmptyB{
+border-radius: 10px;
+    padding: 7px;
+    background-color: #1de702;
+}
+
+#isEmptyB:hover{
+background-color: #1eff00;
+}
+
+#iClear{
+border-radius: 10px;
+    padding: 7px;
+    background-color: #1eff00;
+}
+
+#iClear:hover{
+background-color: #4eff36;
+}
+
