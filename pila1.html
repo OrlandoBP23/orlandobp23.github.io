@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/pila1.js" defer></script>
+    <link rel="stylesheet" href="css/pila1.css">
+    <title>Pila1</title>
+</head>
+
+<body onload="Aleatorias()">
+    <a href="index.html" id="indice"> Regresar al indice</a>
+    <h2>Pila genérica(stack)</h2>
+    <p>
+        Desarrolle una aplicación que muestre un objeto tipo pila, e implemente los métodos Push, Pop, Peek, Clear,
+        Find, isEmpty
+    </p>
+    <br>
+    <b>Elemento: <input type="text" id="Elemento" onkeyup="CambioTexto()">
+        <input type="button" value="Push()" id="iPush" onclick="Push(); Aleatorias();">
+        <input type="button" value="Pop()" id="iPop" onclick="Pop();">
+        <input type="button" value="Peek()" id="iPeek" onclick="Peek()">
+        <input type="button" value="Find()" id="iFind" onclick="Find();">
+        <input type="button" value="isEmpty()" id="isEmptyB" onclick="IsEmpty()">
+        <input type="button" value="Clear()" id="iClear" onclick="Clear()">
+    </b>
+    <br>
+    <br>
+    <br>
+    <table style="display: inline-table;" id="tablita">
+        <tbody id="tabla"></tbody>
+    </table>
+    <br>
+    <h3>Ejemplo</h3>
+    <img id="pilaImg" src="pila.webp" alt="" style="display: inline-table;">
+    <h1 id="mensaje"></h1>
+</body>
+
+</html>
