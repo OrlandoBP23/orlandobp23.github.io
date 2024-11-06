@@ -1,0 +1,103 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #a5e29b;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+}
+
+h1, h2 {
+    color: rgb(0, 0, 0);
+}
+
+#exp{
+    border-radius: 10px;
+    background-color: #65cf7f;
+    border: none;
+    font-size: 20px;
+}
+
+input[type="button"] {
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+input[type="button"]:hover{
+    background-color: #65cf7f;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#textPaso{
+    font-size: 14px;
+    background-color: #65cf7f;
+    border-color: #f1f1f1;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    width: 20%;
+    position: fixed;
+    top: 15%;
+    left: 74%;
+    line-height: 1.8; 
+}
+
+#indice {
+    color: #1a610f;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+}
+
+#indice:hover {
+    color: #31c51b;
+}
+
+table {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    font-size: 18px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
