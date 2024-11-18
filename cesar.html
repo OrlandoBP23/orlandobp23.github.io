@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cesar.css">
+    <script src="./js/cesar.js"></script>
+    <title>Caesar Cipher</title>
+
+</head>
+<body onload="optionKey()">
+    <a href="index.html" id="indice"> Regresar al indice</a>
+    <h1>Cifrado de Cesar</h1>
+    <p>Mensaje: </p>
+    <textarea name="" id="originalMessage" rows="20" onkeydown="allows(event)" onkeyup="capital(this)"></textarea><br>
+    <p>Llave:</p>
+    <select name="" id="key1"></select>
+    <select name="" id="key2"></select>
+    <select name="" id="key3"></select>
+    <select name="" id="key4"></select>
+    <select name="" id="key5"></select>
+    <select name="" id="key6"></select><br>
+    <input type="button" value="Ejemplo 1" onclick="example1()">
+    <input type="button" value="Ejemplo 2" onclick="example2()">
+    <input type="button" value="Encriptar" onclick="encript()">
+    <input type="button" value="Guardar llave" onclick="saveKey()">
+    <input type="button" value="Guardar mensaje encriptado" onclick="saveMessage()">
+    <input type="button" value="Borrar" onclick="clear1()">
+    <br>
+    <p>Mensaje Encriptado: </p>
+    <textarea name="" id="encryptedMessage" rows="20" readonly></textarea><br>
+</body>
+</html>
